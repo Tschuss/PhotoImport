@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class BorraDirVacios {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		 		
 		if (args.length!=1) {
 			System.err.println("USE: BorrarDirVacios <dir padre>");
 			return;

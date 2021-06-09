@@ -14,7 +14,7 @@ public class PhotoImport {
 		
 		if (args[0].equals("ALL")) {
 			 
-			int count = copyormove(new File("D:\\Dropbox\\Cargas de c·mara de Laura"),
+			int count = copyormove(new File("D:\\Dropbox\\Cargas de c√°mara de Laura"),
 					new File("D:\\PHOTO\\cosas_de_casa"),
 					false);
 			System.out.println("Total: "+ count +"fotos...");
@@ -69,15 +69,17 @@ public class PhotoImport {
 			if (!name.startsWith(".") && !name.endsWith(".ini") && !name.endsWith(".txt") ) {
 				System.out.println("origen: <"+name+ ">: "+ dir_fecha);
 				if (!dst_fecha.exists()) {
-					dst_fecha.mkdirs();
-					System.out.println("crear: "+dst_fecha.getAbsolutePath());
+					boolean created = dst_fecha.mkdirs();
+					System.out.println("crear: "+dst_fecha.getAbsolutePath()+ ": "+created);
 				}
+				
 				System.out.println("destino: "+dst_fecha.getAbsolutePath()+File.separator+name);
 				
 				try {
 					if (move) { 
 						photos[i].renameTo(new File(dst_fecha.getAbsolutePath()+File.separator+name));
 					} else {
+						System.out.println(photos[i].exists());
 						Files.copy(photos[i].toPath(), new File(dst_fecha.getAbsolutePath()+File.separator+name).toPath(), StandardCopyOption.COPY_ATTRIBUTES);
 					}
 					total++;
