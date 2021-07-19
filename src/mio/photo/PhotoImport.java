@@ -16,17 +16,17 @@ public class PhotoImport {
 			 
 			int count = copyormove(new File("D:\\Dropbox\\Cargas de cámara de Laura"),
 					new File("D:\\PHOTO\\cosas_de_casa"),
-					false);
+					true);
 			System.out.println("Total: "+ count +"fotos...");
 			
 			count = copyormove(new File("D:\\Dropbox\\Camera Uploads de Pilar"),
 					new File("D:\\PHOTO\\cosas_de_casa"),
-					false);
+					true);
 			System.out.println("Total: "+ count +"fotos...");
 			
 			count = copyormove(new File("D:\\Dropbox\\Camera Uploads"),
 					new File("D:\\PHOTO\\cosas_de_casa"),
-					false);
+					true);
 			System.out.println("Total: "+ count +"fotos...");
 				
 		} else {
