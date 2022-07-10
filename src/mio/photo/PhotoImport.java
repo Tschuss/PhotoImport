@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.sql.Date;
 
+//copia fotos desde dropbox a un directorio local
 public class PhotoImport {
 
 	public static void main(String[] args) {

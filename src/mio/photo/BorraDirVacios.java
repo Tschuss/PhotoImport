@@ -3,6 +3,7 @@ package mio.photo;
 import java.io.File;
 import java.util.Arrays;
 
+//borra los directorios vacios
 public class BorraDirVacios {
 
 	public static void main(String[] args) {
